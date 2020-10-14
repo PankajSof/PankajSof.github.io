@@ -1,1 +1,49 @@
-Hello Pankaj
+<html>
+    <body onload="Show()"bgcolor="yellow">
+        <form>
+            <center>
+            <pre> 
+                <div id="d1">-----TIME AND DAY SHOW HERE------</div>
+            </pre>
+            </center>
+        </form>
+       <script>
+           function display(){
+              var d=new Date();
+              var day=d.getDay();
+              var y=" ";
+              switch(day)
+              {
+                  case 0:
+                            y="SUNDAY";
+                            break;
+                 case 1:
+                            y="MONDAY";
+                            break;
+                 case 2:
+                            y="TUESDAY";
+                            break;
+                 case 3:
+                            y="WEDNESDAY";
+                            break;
+                 case 4:
+                            y="THURESDAY";
+                            break;
+                 case 5:
+                            y="FRIDAY";
+                            break;
+                 case 6:
+                            y="SATURDAY";
+                             break;
+              }
+             document.getElementById("d1").innerHTML=d.toLocaleTimeString()+"\n name of day is = "+y;
+             
+
+            }
+            function Show(){
+                //setinterval("string/function",milisecond);
+                setInterval("display()",1000);
+            }
+       </script>
+    </body>
+</html>

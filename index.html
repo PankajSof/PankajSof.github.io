@@ -1,49 +1,66 @@
 <html>
-    <body onload="Show()"bgcolor="yellow">
-        <form>
-            <center>
-            <pre> 
-                <div id="d1">-----TIME AND DAY SHOW HERE------</div>
-            </pre>
-            </center>
-        </form>
-       <script>
-           function display(){
-              var d=new Date();
-              var day=d.getDay();
-              var y=" ";
-              switch(day)
-              {
-                  case 0:
-                            y="SUNDAY";
-                            break;
-                 case 1:
-                            y="MONDAY";
-                            break;
-                 case 2:
-                            y="TUESDAY";
-                            break;
-                 case 3:
-                            y="WEDNESDAY";
-                            break;
-                 case 4:
-                            y="THURESDAY";
-                            break;
-                 case 5:
-                            y="FRIDAY";
-                            break;
-                 case 6:
-                            y="SATURDAY";
-                             break;
-              }
-             document.getElementById("d1").innerHTML=d.toLocaleTimeString()+"\n name of day is = "+y;
-             
-
-            }
-            function Show(){
-                //setinterval("string/function",milisecond);
-                setInterval("display()",1000);
-            }
-       </script>
+    <head>
+            <style>
+                table,th,td{
+                    border: 1px solid rgb(10, 228, 46);
+                    border-collapse: collapse;
+                }
+                th,td{
+                    padding: 15px;
+                    text-align: left;
+                }
+                #n1{
+                    width:100%;
+                    height: 50%;
+                    background-color:#f1f1c1;
+                }
+            </style>
+    </head>
+    <body>
+          <pre>
+            <table id="n1">
+            <tr>
+                <th>roll no</th>
+                <th>first name</th>
+                <th>last name</th>
+                
+                <th>mobile no</th>
+            </tr>
+            <tr>
+                <td>49</td>
+                <td>pankaj</td>
+                <td>kumar</td>
+                
+                <td>7739591942</td>
+            </tr>
+            <tr>
+                <td>59</td>
+                <td>pawan</td>
+                <td>kumar</td>
+                
+                <td>8083373213</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>suraj</td>
+                <td>kumar</td>
+                
+                <td>9852594590</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>ankit</td>
+                <td>raj</td>
+               
+                <td>9661611918</td>
+            </tr>
+            <tr>
+                <td>20</td>
+                <td>anjali</td>
+                <td>raj</td>
+                
+                <td>7739285358</td>
+            </tr>
+            </table>
     </body>
 </html>

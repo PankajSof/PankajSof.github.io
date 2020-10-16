@@ -1,66 +1,34 @@
 <html>
     <head>
-            <style>
-                table,th,td{
-                    border: 1px solid rgb(10, 228, 46);
-                    border-collapse: collapse;
-                }
-                th,td{
-                    padding: 15px;
-                    text-align: left;
-                }
-                #n1{
-                    width:100%;
-                    height: 50%;
-                    background-color:#f1f1c1;
-                }
-            </style>
+        <style>
+            div{background-color: rgba(18, 228, 64, 0.959);}
+        </style>
+        <title>
+            www.colorchanging.com
+        </title>
     </head>
     <body>
-          <pre>
-            <table id="n1">
-            <tr>
-                <th>roll no</th>
-                <th>first name</th>
-                <th>last name</th>
-                
-                <th>mobile no</th>
-            </tr>
-            <tr>
-                <td>49</td>
-                <td>pankaj</td>
-                <td>kumar</td>
-                
-                <td>7739591942</td>
-            </tr>
-            <tr>
-                <td>59</td>
-                <td>pawan</td>
-                <td>kumar</td>
-                
-                <td>8083373213</td>
-            </tr>
-            <tr>
-                <td>15</td>
-                <td>suraj</td>
-                <td>kumar</td>
-                
-                <td>9852594590</td>
-            </tr>
-            <tr>
-                <td>12</td>
-                <td>ankit</td>
-                <td>raj</td>
-               
-                <td>9661611918</td>
-            </tr>
-            <tr>
-                <td>20</td>
-                <td>anjali</td>
-                <td>raj</td>
-                
-                <td>7739285358</td>
-            </tr>
-            </table>
+        <div width="200"height="200"id="div1">
+            PANKAJ SHARMA
+        </div>
+        <button type="button"onclick="show()"name="button">PANKAJ</button>
     </body>
+    <script>
+        var i=0;
+        var array1=["rgb(255,0,0)","rgb(0,255,0)","rgb(0,0,255)","rgb(125,125,125)"];
+        function color(){
+            document.getElementById('div1').style.backgroundColor=array1[i];
+            if(i<4){
+                i++;
+                }
+                else
+                {
+                    i=0;
+                }
+            }
+            function show()
+            {
+                setInterval("color()",1000);
+            } 
+    </script>
 </html>
